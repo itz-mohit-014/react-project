@@ -1,6 +1,5 @@
 
 import {  useState } from "react";
-import MenuItemList from "./MenuItemList";
 import Shimmer from "./Shimmer";
 import useFetchRestaurentMenu from "../utilits/useFetchRestaurentMenu";
 import RestaurentCategories from "./RestaurentCategori";
@@ -25,7 +24,7 @@ return <div className="SaperateRes">
             title = {title}
             itemCards = {itemCards}
             showItemIndex = { index === showItemIndex  } 
-            setShowItemIndex = {()=>setShowItemIndex(index )}
+            setShowItemIndex = {()=>setShowItemIndex(index == showItemIndex ? -1 : index)}
         /> 
 
     } )}
